@@ -1,0 +1,228 @@
+:root {
+  /* Fonts */
+  --main-font: 'Roboto';
+  --logo-font: 'Raleway';
+
+  /* Text colors */
+  --main-text-color: #212121;
+  --description-text-color: #757575;
+  --accent-project-color: #2196f3;
+  --header-logo-color: #000000;
+
+  /* Background colors */
+  --main-bg-color: #ffffff;
+  --dark-bg-color: #2f303a;
+
+  /* Others */
+  --contacts-footer-color: rgba(255, 255, 255, 0.6);
+  --team-bg-color: #f5f4fa;
+  --projects-bg-color: #eeeeee;
+}
+
+body {
+  font-family: var(--main-font), sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+}
+
+/* Сommon styles */
+.link {
+  text-decoration: none;
+}
+
+.site-nav-list,
+.header-contacts-list,
+.address-list,
+.benefits-list,
+.about-list,
+.team-list,
+.projects-filters-list,
+.projects-list {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* Header styles */
+
+.header-link-logo {
+  font-family: var(--logo-font);
+  color: var(--header-logo-color);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+}
+
+.logo {
+  color: var(--accent-project-color);
+}
+
+.site-nav,
+.header-contacts-list {
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link {
+  color: var(--main-text-color);
+}
+
+.header-contacts-list a {
+  color: var(--description-text-color);
+}
+
+.current .link,
+.site-nav .link:hover,
+.site-nav .link:focus,
+.header-contacts-list .link:hover,
+.header-contacts-list .link:focus {
+  color: var(--accent-project-color);
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--dark-bg-color);
+}
+
+.footer-link-logo {
+  font-family: var(--logo-font);
+  color: var(--main-bg-color);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+}
+
+.address {
+  font-style: normal;
+}
+
+.footer-company-adress .link,
+.footer-contacts .link {
+  line-height: calc(24 / 14);
+}
+
+.footer-company-adress .link {
+  color: var(--main-bg-color);
+}
+
+.footer-contacts .link {
+  color: var(--contacts-footer-color);
+}
+
+.footer-company-adress .link:hover,
+.footer-company-adress .link:focus,
+.footer-contacts .link:hover,
+.footer-contacts .link:focus {
+  color: var(--accent-project-color);
+}
+
+/* Main page styles */
+
+/* Hero styles */
+.hero {
+  background-color: var(--dark-bg-color);
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: calc(60 / 44);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+}
+
+.hero-button {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--main-bg-color);
+  background-color: var(--accent-project-color);
+  cursor: pointer;
+}
+
+/* Main content*/
+.about-title,
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+}
+
+.benefits-item-title {
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+}
+
+.benefits-item-description {
+  line-height: calc(24 / 14);
+  color: var(--description-text-color);
+}
+
+.team {
+  background-color: var(--team-bg-color);
+}
+
+.teammate-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.team-mate-position {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--description-text-color);
+}
+
+/* Portfolio styles */
+.filters-button {
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--main-text-color);
+  line-height: calc(26 / 16);
+  text-align: center;
+  background-color: var(--team-bg-color);
+  cursor: pointer;
+}
+
+.filters-button:hover,
+.filters-button:focus {
+  color: var(--main-bg-color);
+  background-color: var(--accent-project-color);
+}
+
+.project-titles {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+
+.project-descriptions {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  color: var(--description-text-color);
+}
