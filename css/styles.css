@@ -17,6 +17,7 @@
   --contacts-footer-color: rgba(255, 255, 255, 0.6);
   --team-bg-color: #f5f4fa;
   --projects-bg-color: #eeeeee;
+  --header-border-clr: #ececec;
 }
 
 body {
@@ -27,20 +28,51 @@ body {
   background-color: var(--main-bg-color);
 }
 
-/* Сommon styles */
+/* -----------------------------------Сommon styles----------------------------------- */
 .link {
   text-decoration: none;
 }
 
-.site-nav-list,
-.header-contacts-list,
-.address-list,
-.benefits-list,
-.about-list,
-.team-list,
-.projects-filters-list,
-.projects-list {
+.list {
   list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-family: var(--main-font);
+  text-align: center;
+  display: block;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .visually-hidden {
@@ -56,66 +88,103 @@ body {
   margin: -1px;
 }
 
-/* Header styles */
+/* -----------------------------------Header styles----------------------------------- */
+.header > .container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--header-border-clr);
+}
 
-.header-link-logo {
+.header-logo {
   font-family: var(--logo-font);
   color: var(--header-logo-color);
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+
+  margin-right: 93px;
 }
 
-.logo {
-  color: var(--accent-project-color);
-}
-
-.site-nav,
-.header-contacts-list {
+.nav-list,
+.header-contacts {
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+
+  display: flex;
+  align-items: center;
 }
 
-.site-nav .link {
+.nav-list {
+  width: 281px;
+  justify-content: space-between;
+  margin-right: 344px;
+}
+
+.nav-link {
+  display: block;
   color: var(--main-text-color);
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.header-contacts-list a {
+.header-contacts {
+  width: 303px;
+  justify-content: space-between;
+}
+
+.header-email,
+.header-phone {
+  display: block;
   color: var(--description-text-color);
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
+.logo,
 .current .link,
 .site-nav .link:hover,
 .site-nav .link:focus,
-.header-contacts-list .link:hover,
-.header-contacts-list .link:focus {
+.header-contacts .link:hover,
+.header-contacts .link:focus {
   color: var(--accent-project-color);
 }
 
-/* Footer styles */
+/* ------------------------------------Footer styles------------------------------------ */
 .footer {
   background-color: var(--dark-bg-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.footer-link-logo {
+.footer-logo {
   font-family: var(--logo-font);
   color: var(--main-bg-color);
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+
+  display: block;
+  margin-bottom: 20px;
 }
 
 .address {
   font-style: normal;
 }
 
-.footer-company-adress .link,
+.address-list .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-adress .link,
 .footer-contacts .link {
   line-height: calc(24 / 14);
 }
 
-.footer-company-adress .link {
+.adress-link {
   color: var(--main-bg-color);
 }
 
@@ -123,16 +192,16 @@ body {
   color: var(--contacts-footer-color);
 }
 
-.footer-company-adress .link:hover,
-.footer-company-adress .link:focus,
+.footer-adress .link:focus,
+.footer-adress .link:hover,
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--accent-project-color);
 }
 
-/* Main page styles */
+/* -----------------------------------Main page styles----------------------------------- */
 
-/* Hero styles */
+/* ----------------------------Hero styles---------------------------- */
 .hero {
   background-color: var(--dark-bg-color);
 }
@@ -144,38 +213,95 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-bg-color);
-}
 
+  width: 696px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero-button {
-  font-family: var(--main-font);
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-bg-color);
   background-color: var(--accent-project-color);
-  cursor: pointer;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
 }
 
-/* Main content*/
+/*---------------------------- Main content ----------------------------*/
 .about-title,
 .team-title {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
+
+  margin-bottom: 50px;
 }
 
-.benefits-item-title {
+.benefit-title {
   font-weight: 700;
   line-height: calc(16 / 14);
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 
-.benefits-item-description {
+.benefits-descr {
   line-height: calc(24 / 14);
   color: var(--description-text-color);
+}
+
+.benefits-list {
+  display: flex;
+  /* flex-wrap: nowrap;
+  gap: 30px;
+  flex-basis: calc((100%-90px)/4); */
+}
+
+.benefits-item {
+  width: 270px;
+}
+
+.benefits-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-item {
+  padding-bottom: 30px;
+}
+
+.team-photo {
+  margin-bottom: 30px;
+}
+
+.teammate-name {
+  margin-bottom: 10px;
 }
 
 .team {
@@ -189,29 +315,43 @@ body {
   text-align: center;
 }
 
-.team-mate-position {
+.teammate-position {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   color: var(--description-text-color);
 }
 
-/* Portfolio styles */
+/*------------------------ Portfolio page styles ------------------------*/
+.projects-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 .filters-button {
-  font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
   color: var(--main-text-color);
   line-height: calc(26 / 16);
-  text-align: center;
   background-color: var(--team-bg-color);
-  cursor: pointer;
+
+  padding: 6px 22px;
 }
 
 .filters-button:hover,
 .filters-button:focus {
   color: var(--main-bg-color);
   background-color: var(--accent-project-color);
+
+  padding: 6px 25px;
+}
+
+.filters-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.project-photo {
+  /* margin-bottom: 20px; */
 }
 
 .project-titles {
@@ -219,10 +359,28 @@ body {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
 }
 
 .project-descriptions {
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--description-text-color);
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.projects-item {
+  flex-basis: calc((1170px-60px) / 3);
+}
+.progect-frame {
+  border-left: 1px solid var(--projects-bg-color);
+  border-right: 1px solid var(--projects-bg-color);
+  border-bottom: 1px solid var(--projects-bg-color);
+  padding: 20px 24px;
 }
