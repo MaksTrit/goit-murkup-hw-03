@@ -376,7 +376,7 @@ button {
 }
 
 .projects-item {
-  flex-basis: calc((1170px-60px) / 3);
+  flex-basis: calc((100% - 60px*2)  /  3);
 }
 .progect-frame {
   border-left: 1px solid var(--projects-bg-color);
