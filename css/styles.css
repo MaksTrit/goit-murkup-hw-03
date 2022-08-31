@@ -55,7 +55,6 @@ img {
 }
 
 button {
-  font-family: var(--main-font);
   text-align: center;
   display: block;
   border: none;
@@ -89,10 +88,13 @@ button {
 }
 
 /* -----------------------------------Header styles----------------------------------- */
+.header {
+  border-bottom: 1px solid var(--header-border-clr);
+}
+
 .header > .container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--header-border-clr);
 }
 
 .header-logo {
@@ -105,50 +107,46 @@ button {
   margin-right: 93px;
 }
 
-.nav-list,
-.header-contacts {
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-
+.nav-list {
   display: flex;
   align-items: center;
-}
-
-.nav-list {
-  width: 281px;
-  justify-content: space-between;
-  margin-right: 344px;
+  gap: 50px;
 }
 
 .nav-link {
-  display: block;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
   color: var(--main-text-color);
 
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 .header-contacts {
-  width: 303px;
-  justify-content: space-between;
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
 }
 
-.header-email,
-.header-phone {
-  display: block;
+.header-contact {
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
   color: var(--description-text-color);
 
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 .logo,
 .current .link,
-.site-nav .link:hover,
-.site-nav .link:focus,
-.header-contacts .link:hover,
-.header-contacts .link:focus {
+.nav-link:hover,
+.nav-link:focus,
+.header-contact:hover,
+.header-contact:focus {
   color: var(--accent-project-color);
 }
 
@@ -204,6 +202,9 @@ button {
 /* ----------------------------Hero styles---------------------------- */
 .hero {
   background-color: var(--dark-bg-color);
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -220,10 +221,7 @@ button {
   margin-right: auto;
   margin-bottom: 30px;
 }
-.hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
+
 .hero-button {
   font-weight: 700;
   font-size: 16px;
@@ -249,6 +247,7 @@ button {
 }
 
 .benefit-title {
+  font-size: 14px;
   font-weight: 700;
   line-height: calc(16 / 14);
   text-transform: uppercase;
@@ -284,6 +283,9 @@ button {
   margin-right: 30px;
 }
 
+.team {
+  background-color: var(--team-bg-color);
+}
 .team-list {
   display: flex;
 }
@@ -293,19 +295,15 @@ button {
 }
 
 .team-item {
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teammate-descr {
+  padding-top: 30px;
   padding-bottom: 30px;
-}
-
-.team-photo {
-  margin-bottom: 30px;
-}
-
-.teammate-name {
-  margin-bottom: 10px;
-}
-
-.team {
-  background-color: var(--team-bg-color);
 }
 
 .teammate-name {
@@ -313,6 +311,8 @@ button {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+
+  margin-bottom: 10px;
 }
 
 .teammate-position {
@@ -332,6 +332,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   color: var(--main-text-color);
+  letter-spacing: inherit;
   line-height: calc(26 / 16);
   background-color: var(--team-bg-color);
 
@@ -342,17 +343,12 @@ button {
 .filters-button:focus {
   color: var(--main-bg-color);
   background-color: var(--accent-project-color);
-
-  padding: 6px 25px;
 }
 
 .filters-item:not(:last-child) {
   margin-right: 8px;
 }
 
-.project-photo {
-  /* margin-bottom: 20px; */
-}
 
 .project-titles {
   font-weight: 700;
@@ -376,11 +372,10 @@ button {
 }
 
 .projects-item {
-  flex-basis: calc((100% - 60px*2)  /  3);
+  flex-basis: calc((100% - 30px * 2) / 3);
 }
 .progect-frame {
-  border-left: 1px solid var(--projects-bg-color);
-  border-right: 1px solid var(--projects-bg-color);
-  border-bottom: 1px solid var(--projects-bg-color);
+  border: 1px solid var(--projects-bg-color);
+  border-top: none;
   padding: 20px 24px;
 }
